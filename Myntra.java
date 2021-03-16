@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.IFactoryAnnotation;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -58,7 +59,11 @@ public class Myntra {
 		   List<WebElement> mango = driver.findElementsByXPath("//h3[text()='MANGO']");
 		   
 		   for (WebElement list : mango) {
-			   System.out.println(list.getText());
+			   if (list.getText().equals("MANGO")) {
+				   System.out.println("MANGO text matches");
+			}else {
+				System.out.println("MANGO text doest matches");
+			}
 			
 		}
 		   
