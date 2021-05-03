@@ -22,7 +22,7 @@ public class Nykka {
 		 driver.manage().window().maximize();
 		    driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
 		    driver.get("https://www.nykaa.com/");
-		    WebElement brands = driver.findElementByXPath("(//a[@href='#'])[2]");
+		    WebElement brands = driver.findElementByXPath("//a[text()='brands']");
 		    Actions builder = new Actions(driver);
 		    builder.moveToElement(brands).perform();
 		    WebElement popular = driver.findElementByXPath("//a[text()='Popular']");
