@@ -78,7 +78,7 @@ public class Myntra {
 		  
 		   WebElement size = driver.findElementByXPath("(//img[@class='img-responsive'])[1]");
 		   builder.moveToElement(size).perform();
-		   driver.findElementByXPath("(//span[@class='product-wishlistFlex product-actionsButton product-wishlist '])[1]").click();
+		   driver.findElementByXPath("//span[@class='product-wishlistFlex product-actionsButton product-wishlist '][1]").click();
 		   driver.close();
 		   
 		   
