@@ -67,6 +67,7 @@ public class Nykka {
             
             driver.findElementByXPath("(//button[@class='combo-add-to-btn prdt-des-btn js--toggle-sbag nk-btn nk-btn-rnd atc-simple m-content__product-list__cart-btn  '])[1]").click();
 		    driver.findElementByXPath("//div[@class='AddBagIcon']").click();
+		    Thread.sleep(2000);
 		    String total = driver.findElementByXPath("//div[@class='value medium-strong']").getText();
 		    String price = total.replaceAll("\\D", "");
 		    System.out.println("The grand total = "+price);
